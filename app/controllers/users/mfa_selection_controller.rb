@@ -6,12 +6,12 @@ module Users
       def index
         @two_factor_options_form = TwoFactorOptionsForm.new(current_user)
         @presenter = two_factor_options_presenter
-        analytics.track_event(Analytics::USER_REGISTRATION_2FA_SETUP_VISIT)
+        analytics.track_event(Analytics::USER_REGISTRATION_2FA_ADDITIONAL_SETUP_VISIT)
       end
 
       def create
         result = submit_form
-        analytics.track_event(Analytics::USER_REGISTRATION_2FA_SETUP, result.to_h)
+        analytics.track_event(Analytics::USER_REGISTRATION_2FA_ADDITIONAL_SETUP, result.to_h)
 
         if result.success?
           process_valid_form
@@ -39,6 +39,7 @@ module Users
 
       def process_valid_form
         user_session[:selected_mfa_options] = @two_factor_options_form.selection
+        user_session[:suggest_second_mfa] = false
         redirect_to confirmation_path(user_session[:selected_mfa_options].first)
       end
 

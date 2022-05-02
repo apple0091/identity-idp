@@ -40,6 +40,7 @@ class MfaConfirmationController < ApplicationController
   end
 
   def next_path
+    return second_mfa_setup_path if user_session[:suggest_second_mfa]
     confirmation_path(next_mfa_selection_choice)
   end
 
