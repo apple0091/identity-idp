@@ -1,5 +1,3 @@
-<%# If it is decided that there will be an info banner on this page for MFA setup, the text will need Gengo translations %>
-
 <% if IdentityConfig.store.select_multiple_mfa_options %>
   <%= render AlertComponent.new(type: :info, class: 'margin-bottom-4') do %>
     <%= t('mfa.info') %>
