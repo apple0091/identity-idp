@@ -93,7 +93,7 @@ gpo_designated_receiver_pii: '{}'
 hide_phone_mfa_signup: false
 identity_pki_disabled: false
 identity_pki_local_dev: false
-idv_api_enabled: false
+idv_api_enabled_steps: '[]'
 idv_attempt_window_in_hours: 6
 idv_max_attempts: 5
 idv_min_age_years: 13
@@ -232,6 +232,7 @@ vendor_status_lexisnexis_instant_verify: 'operational'
 vendor_status_lexisnexis_trueid: 'operational'
 vendor_status_sms: 'operational'
 vendor_status_voice: 'operational'
+verification_errors_report_configs: '[]'
 verify_gpo_key_attempt_window_in_minutes: 10
 verify_gpo_key_max_attempts: 3
 verify_personal_key_attempt_window_in_minutes: 15
@@ -244,7 +245,7 @@ usps_ipp_root_url: ''
 usps_ipp_request_timeout: 10
 usps_ipp_sponsor_id: ''
 usps_ipp_username: ''
-usps_upload_allowed_for_strict_ial2: true
+gpo_allowed_for_strict_ial2: true
 voice_otp_pause_time: '0.5s'
 voice_otp_speech_rate: 'slow'
 voip_check: true
@@ -280,6 +281,7 @@ development:
   hmac_fingerprinter_key: a2c813d4dca919340866ba58063e4072adc459b767a74cf2666d5c1eef3861db26708e7437abde1755eb24f4034386b0fea1850a1cb7e56bff8fae3cc6ade96c
   hmac_fingerprinter_key_queue: '["11111111111111111111111111111111", "22222222222222222222222222222222"]'
   identity_pki_local_dev: true
+  idv_api_enabled_steps: '["personal_key","personal_key_confirm"]'
   liveness_checking_enabled: true
   logins_per_ip_limit: 5
   logo_upload_enabled: true

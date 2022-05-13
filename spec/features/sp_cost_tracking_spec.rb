@@ -12,7 +12,7 @@ feature 'SP Costing', :email do
   let(:email) { 'test@test.com' }
   let(:password) { Features::SessionHelper::VALID_PASSWORD }
 
-  it 'logs the correct costs for an ial2 user creation from sp with oidc' do
+  it 'logs the correct costs for an ial2 user creation from sp with oidc', js: true do
     create_ial2_user_from_sp(email)
 
     expect_sp_cost_type(0, 2, 'acuant_front_image')
@@ -29,7 +29,7 @@ feature 'SP Costing', :email do
     expect_sp_cost_type(5, 2, 'lexis_nexis_address')
   end
 
-  it 'logs the cost to the SP for reproofing' do
+  it 'logs the cost to the SP for reproofing', js: true do
     create_ial2_user_from_sp(email)
 
     # track costs without dealing with 'remember device'
@@ -43,10 +43,10 @@ feature 'SP Costing', :email do
     fill_in_code_with_last_phone_otp
     click_submit_default
     complete_all_doc_auth_steps
-    click_continue
+    click_idv_continue
     fill_in 'Password', with: password
     click_continue
-    click_acknowledge_personal_key
+    acknowledge_and_confirm_personal_key
     click_agree_and_continue
 
     %w[

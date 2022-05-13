@@ -15,6 +15,7 @@ require 'email_spec'
 require 'factory_bot'
 require 'view_component/test_helpers'
 require 'capybara/rspec'
+require 'capybara/webmock'
 
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
@@ -70,11 +71,12 @@ RSpec.configure do |config|
   end
 
   config.before(:each, js: true) do
-    allow(IdentityConfig.store).to receive(:domain_name).and_return('127.0.0.1')
     server = Capybara.current_session.server
-    allow(Rails.application.routes).to receive(:default_url_options).and_return(
-      Rails.application.routes.default_url_options.merge(host: "#{server.host}:#{server.port}"),
-    )
+    server_domain = "#{server.host}:#{server.port}"
+    allow(IdentityConfig.store).to receive(:domain_name).and_return(server_domain)
+    default_url_options = ApplicationController.default_url_options.merge(host: server_domain)
+    self.default_url_options = default_url_options
+    allow(Rails.application.routes).to receive(:default_url_options).and_return(default_url_options)
   end
 
   config.before(:each, type: :controller) do
@@ -101,7 +103,9 @@ RSpec.configure do |config|
 
   config.around(:each, type: :feature) do |example|
     Bullet.enable = true
+    Capybara::Webmock.start
     example.run
+    Capybara::Webmock.stop
     Bullet.enable = false
   end
 
