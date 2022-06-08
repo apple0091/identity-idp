@@ -6,10 +6,10 @@ ruby "~> #{File.read('.ruby-version').strip}"
 gem 'rails', '~> 6.1.5.1'
 
 gem 'ahoy_matey', '~> 3.0'
-gem 'aws-sdk-kms', '~> 1.4'
+gem 'aws-sdk-kms', '~> 1.52', '>= 1.52.0'
 gem 'aws-sdk-pinpoint'
 gem 'aws-sdk-pinpointsmsvoice'
-gem 'aws-sdk-ses', '~> 1.6'
+gem 'aws-sdk-ses', '~> 1.44', '>= 1.44.0'
 gem 'aws-sdk-sns'
 gem 'base32-crockford'
 gem 'blueprinter', '~> 0.25.3'
