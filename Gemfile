@@ -3,7 +3,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 ruby "~> #{File.read('.ruby-version').strip}"
 
-gem 'rails', '~> 6.1.5.1'
+gem 'rails', '~> 6.1.6.1'
 
 gem 'ahoy_matey', '~> 3.0'
 gem 'aws-sdk-kms', '~> 1.4'
@@ -21,7 +21,7 @@ gem 'devise', '~> 4.8'
 gem 'dotiw', '>= 4.0.1'
 gem 'faraday'
 gem 'foundation_emails'
-gem 'good_job', '~> 2.7.0'
+gem 'good_job', '~> 2.7.4'
 gem 'hashie', '~> 4.1'
 gem 'hiredis', '~> 0.6.0'
 gem 'http_accept_language'
@@ -58,7 +58,7 @@ gem 'saml_idp', github: '18F/saml_idp', tag: '0.17.0-18f'
 gem 'scrypt'
 gem 'simple_form', '>= 5.0.2'
 gem 'stringex', require: false
-gem 'strong_migrations', '>= 0.4.2'
+gem 'strong_migrations', '>= 0.7.9'
 gem 'subprocess', require: false
 gem 'uglifier', '~> 4.2'
 gem 'valid_email', '>= 0.1.3'
@@ -80,7 +80,7 @@ group :development do
   gem 'irb'
   gem 'octokit'
   gem 'rack-mini-profiler', '>= 1.1.3', require: false
-  gem 'rails-erd', '>= 1.6.0'
+  gem 'rails-erd', '>= 1.6.1'
 end
 
 group :development, :test do
