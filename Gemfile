@@ -17,11 +17,11 @@ gem 'bootsnap', '~> 1.9.0', require: false
 gem 'browser'
 gem 'connection_pool'
 gem 'cssbundling-rails'
-gem 'devise', '~> 4.8'
+gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'dotiw', '>= 4.0.1'
 gem 'faraday'
 gem 'foundation_emails'
-gem 'good_job', '~> 2.7.0'
+gem 'good_job', '~> 2.7.4'
 gem 'hashie', '~> 4.1'
 gem 'hiredis', '~> 0.6.0'
 gem 'http_accept_language'
@@ -56,7 +56,7 @@ gem 'ruby-saml'
 gem 'safe_target_blank', '>= 1.0.2'
 gem 'saml_idp', github: '18F/saml_idp', tag: '0.17.0-18f'
 gem 'scrypt'
-gem 'simple_form', '>= 5.0.2'
+gem 'simple_form', '>= 5.1.0'
 gem 'stringex', require: false
 gem 'strong_migrations', '>= 0.4.2'
 gem 'subprocess', require: false
@@ -64,8 +64,8 @@ gem 'uglifier', '~> 4.2'
 gem 'valid_email', '>= 0.1.3'
 gem 'view_component', '~> 2.51.0'
 gem 'webauthn', '~> 2.1'
-gem 'xmldsig', '~> 0.6'
-gem 'xmlenc', '~> 0.7', '>= 0.7.1'
+gem 'xmldsig', '~> 0.6', '>= 0.6.6'
+gem 'xmlenc', '~> 0.8', '>= 0.8.0'
 gem 'yard'
 
 # This version of the zxcvbn gem matches the data and behavior of the zxcvbn NPM package.
@@ -89,10 +89,10 @@ group :development, :test do
   gem 'bullet', '>= 6.0.2'
   gem 'capybara-webmock', git: 'https://github.com/hashrocket/capybara-webmock.git', ref: '63d790a0'
   gem 'data_uri', require: false
-  gem 'erb_lint', '~> 0.1.0', require: false
-  gem 'i18n-tasks', '>= 0.9.31'
+  gem 'erb_lint', '~> 0.1.1', require: false
+  gem 'i18n-tasks', '>= 0.9.35'
   gem 'knapsack'
-  gem 'nokogiri', '~> 1.13.4'
+  gem 'nokogiri', '~> 1.13.9'
   gem 'parallel_tests'
   gem 'pg_query', require: false
   gem 'pry-byebug'
@@ -100,7 +100,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'psych'
   gem 'puma'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 4.1', '>= 4.1.2'
   gem 'rubocop', '~> 1.23.0', require: false
   gem 'rubocop-performance', '~> 1.12.0', require: false
   gem 'rubocop-rails', '>= 2.5.2', require: false
@@ -114,14 +114,14 @@ group :test do
   gem 'simplecov-cobertura'
   gem 'simplecov_json_formatter'
   gem 'email_spec'
-  gem 'factory_bot_rails', '>= 5.2.0'
+  gem 'factory_bot_rails', '>= 6.2.0'
   gem 'faker'
   gem 'rack_session_access', '>= 0.2.0'
   gem 'rack-test', '>= 1.1.0'
-  gem 'rails-controller-testing', '>= 1.0.4'
+  gem 'rails-controller-testing', '>= 1.0.5'
   gem 'rspec-retry'
   gem 'shoulda-matchers', '~> 4.0', require: false
-  gem 'webdrivers', '~> 4.0'
+  gem 'webdrivers', '~> 4.7', '>= 4.7.0'
   gem 'webmock'
   gem 'zonebie'
 end
