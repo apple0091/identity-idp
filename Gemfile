@@ -3,9 +3,9 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}.git" }
 
 ruby "~> #{File.read('.ruby-version').strip}"
 
-gem 'rails', '~> 6.1.5.1'
+gem 'rails', '~> 6.1.7.5'
 
-gem 'ahoy_matey', '~> 3.0'
+gem 'ahoy_matey', '~> 4.0', '>= 4.0.0'
 gem 'aws-sdk-kms', '~> 1.4'
 gem 'aws-sdk-pinpoint'
 gem 'aws-sdk-pinpointsmsvoice'
@@ -16,21 +16,21 @@ gem 'blueprinter', '~> 0.25.3'
 gem 'bootsnap', '~> 1.9.0', require: false
 gem 'browser'
 gem 'connection_pool'
-gem 'cssbundling-rails'
-gem 'devise', '~> 4.8'
-gem 'dotiw', '>= 4.0.1'
+gem 'cssbundling-rails', '>= 1.1.0'
+gem 'devise', '~> 4.9', '>= 4.9.0'
+gem 'dotiw', '>= 5.3.3'
 gem 'faraday'
 gem 'foundation_emails'
-gem 'good_job', '~> 2.7.0'
+gem 'good_job', '~> 2.8.0'
 gem 'hashie', '~> 4.1'
 gem 'hiredis', '~> 0.6.0'
 gem 'http_accept_language'
 gem 'identity-hostdata', github: '18F/identity-hostdata', tag: 'v3.4.0'
 gem 'identity-logging', github: '18F/identity-logging', tag: 'v0.1.0'
 gem 'identity_validations', github: '18F/identity-validations', tag: 'v0.7.2'
-gem 'jsbundling-rails', '~> 1.0.0'
+gem 'jsbundling-rails', '~> 1.0.1'
 gem 'jwt'
-gem 'lograge', '>= 0.11.2'
+gem 'lograge', '>= 0.12.0'
 gem 'lru_redux'
 gem 'maxminddb'
 gem 'multiset'
@@ -38,7 +38,7 @@ gem 'net-sftp'
 gem 'newrelic_rpm', '~> 8.0'
 gem 'pg'
 gem 'phonelib'
-gem 'premailer-rails', '>= 1.11.1'
+gem 'premailer-rails', '>= 1.12.0'
 gem 'profanity_filter'
 gem 'rack-attack', '>= 6.2.1'
 gem 'rack-cors', '>= 1.0.5', require: 'rack/cors'
@@ -47,7 +47,7 @@ gem 'rack-timeout', require: false
 gem 'redacted_struct'
 gem 'redis', '>= 3.2.0'
 gem 'redis-namespace'
-gem 'redis-session-store', '>= 0.11.4'
+gem 'redis-session-store', '>= 0.11.5'
 gem 'retries'
 gem 'rotp', '~> 6.1'
 gem 'rqrcode'
@@ -56,13 +56,13 @@ gem 'ruby-saml'
 gem 'safe_target_blank', '>= 1.0.2'
 gem 'saml_idp', github: '18F/saml_idp', tag: '0.17.0-18f'
 gem 'scrypt'
-gem 'simple_form', '>= 5.0.2'
+gem 'simple_form', '>= 5.2.0'
 gem 'stringex', require: false
-gem 'strong_migrations', '>= 0.4.2'
+gem 'strong_migrations', '>= 0.8.0'
 gem 'subprocess', require: false
 gem 'uglifier', '~> 4.2'
 gem 'valid_email', '>= 0.1.3'
-gem 'view_component', '~> 2.51.0'
+gem 'view_component', '~> 2.52.0'
 gem 'webauthn', '~> 2.1'
 gem 'xmldsig', '~> 0.6'
 gem 'xmlenc', '~> 0.7', '>= 0.7.1'
@@ -80,17 +80,17 @@ group :development do
   gem 'irb'
   gem 'octokit'
   gem 'rack-mini-profiler', '>= 1.1.3', require: false
-  gem 'rails-erd', '>= 1.6.0'
+  gem 'rails-erd', '>= 1.7.0'
 end
 
 group :development, :test do
   gem 'aws-sdk-cloudwatchlogs', require: false
   gem 'brakeman', require: false
-  gem 'bullet', '>= 6.0.2'
+  gem 'bullet', '>= 7.0.0'
   gem 'capybara-webmock', git: 'https://github.com/hashrocket/capybara-webmock.git', ref: '63d790a0'
   gem 'data_uri', require: false
-  gem 'erb_lint', '~> 0.1.0', require: false
-  gem 'i18n-tasks', '>= 0.9.31'
+  gem 'erb_lint', '~> 0.1.2', require: false
+  gem 'i18n-tasks', '>= 0.9.36'
   gem 'knapsack'
   gem 'nokogiri', '~> 1.13.4'
   gem 'parallel_tests'
@@ -100,10 +100,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'psych'
   gem 'puma'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.0'
   gem 'rubocop', '~> 1.23.0', require: false
   gem 'rubocop-performance', '~> 1.12.0', require: false
-  gem 'rubocop-rails', '>= 2.5.2', require: false
+  gem 'rubocop-rails', '>= 2.13.0', require: false
 end
 
 group :test do
@@ -120,7 +120,7 @@ group :test do
   gem 'rack-test', '>= 1.1.0'
   gem 'rails-controller-testing', '>= 1.0.4'
   gem 'rspec-retry'
-  gem 'shoulda-matchers', '~> 4.0', require: false
+  gem 'shoulda-matchers', '~> 5.0', '>= 5.0.0', require: false
   gem 'webdrivers', '~> 4.0'
   gem 'webmock'
   gem 'zonebie'
