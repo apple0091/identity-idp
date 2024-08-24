@@ -52,7 +52,7 @@ gem 'retries'
 gem 'rotp', '~> 6.1'
 gem 'rqrcode'
 gem 'ruby-progressbar'
-gem 'ruby-saml'
+gem 'ruby-saml', '>= 1.14.0'
 gem 'safe_target_blank', '>= 1.0.2'
 gem 'saml_idp', github: '18F/saml_idp', tag: '0.17.0-18f'
 gem 'scrypt'
@@ -80,7 +80,7 @@ group :development do
   gem 'irb'
   gem 'octokit'
   gem 'rack-mini-profiler', '>= 1.1.3', require: false
-  gem 'rails-erd', '>= 1.6.0'
+  gem 'rails-erd', '>= 1.7.0'
 end
 
 group :development, :test do
@@ -89,7 +89,7 @@ group :development, :test do
   gem 'bullet', '>= 6.0.2'
   gem 'capybara-webmock', git: 'https://github.com/hashrocket/capybara-webmock.git', ref: '63d790a0'
   gem 'data_uri', require: false
-  gem 'erb_lint', '~> 0.1.0', require: false
+  gem 'erb_lint', '~> 0.1.2', require: false
   gem 'i18n-tasks', '>= 0.9.31'
   gem 'knapsack'
   gem 'nokogiri', '~> 1.13.4'
@@ -101,9 +101,9 @@ group :development, :test do
   gem 'psych'
   gem 'puma'
   gem 'rspec-rails', '~> 4.0'
-  gem 'rubocop', '~> 1.23.0', require: false
-  gem 'rubocop-performance', '~> 1.12.0', require: false
-  gem 'rubocop-rails', '>= 2.5.2', require: false
+  gem 'rubocop', '~> 1.24.0', require: false
+  gem 'rubocop-performance', '~> 1.13.0', require: false
+  gem 'rubocop-rails', '>= 2.13.0', require: false
 end
 
 group :test do
@@ -111,7 +111,7 @@ group :test do
   gem 'bundler-audit', require: false
   gem 'capybara-selenium', '>= 0.0.6'
   gem 'simplecov', '~> 0.21.0', require: false
-  gem 'simplecov-cobertura'
+  gem 'simplecov-cobertura', '>= 2.1.0'
   gem 'simplecov_json_formatter'
   gem 'email_spec'
   gem 'factory_bot_rails', '>= 5.2.0'
@@ -121,7 +121,7 @@ group :test do
   gem 'rails-controller-testing', '>= 1.0.4'
   gem 'rspec-retry'
   gem 'shoulda-matchers', '~> 4.0', require: false
-  gem 'webdrivers', '~> 4.0'
-  gem 'webmock'
+  gem 'webdrivers', '~> 5.0', '>= 5.0.0'
+  gem 'webmock', '>= 3.15.1'
   gem 'zonebie'
 end
