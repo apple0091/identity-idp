@@ -99,7 +99,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-rails'
   gem 'psych'
-  gem 'puma'
+  gem 'puma', '>= 5.6.9'
   gem 'rspec-rails', '~> 4.0'
   gem 'rubocop', '~> 1.23.0', require: false
   gem 'rubocop-performance', '~> 1.12.0', require: false

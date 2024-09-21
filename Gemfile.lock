@@ -398,7 +398,7 @@ GEM
       net-ssh (>= 5.0.0, < 7.0.0)
     net-ssh (6.1.0)
     newrelic_rpm (8.5.0)
-    nio4r (2.5.8)
+    nio4r (2.7.3)
     nokogiri (1.13.4)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
@@ -443,7 +443,7 @@ GEM
       pry (>= 0.10.4)
     psych (4.0.2)
     public_suffix (4.0.6)
-    puma (5.6.4)
+    puma (6.4.3)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.0)
@@ -759,7 +759,7 @@ DEPENDENCIES
   pry-doc
   pry-rails
   psych
-  puma
+  puma (>= 5.6.9)
   rack-attack (>= 6.2.1)
   rack-cors (>= 1.0.5)
   rack-headers_filter
@@ -808,7 +808,7 @@ DEPENDENCIES
   zxcvbn (= 0.1.7)
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 2.7.8p225
 
 BUNDLED WITH
-   2.2.32
+   2.1.4
