@@ -41,7 +41,7 @@ gem 'phonelib'
 gem 'premailer-rails', '>= 1.11.1'
 gem 'profanity_filter'
 gem 'rack-attack', '>= 6.2.1'
-gem 'rack-cors', '>= 1.0.5', require: 'rack/cors'
+gem 'rack-cors', '>= 3.0.0', require: 'rack/cors'
 gem 'rack-headers_filter'
 gem 'rack-timeout', require: false
 gem 'redacted_struct'
