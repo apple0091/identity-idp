@@ -89,7 +89,7 @@ group :development, :test do
   gem 'bullet', '>= 6.0.2'
   gem 'capybara-webmock', git: 'https://github.com/hashrocket/capybara-webmock.git', ref: '63d790a0'
   gem 'data_uri', require: false
-  gem 'erb_lint', '~> 0.1.0', require: false
+  gem 'erb_lint', '~> 0.1.2', require: false
   gem 'i18n-tasks', '>= 0.9.31'
   gem 'knapsack'
   gem 'nokogiri', '~> 1.13.4'
@@ -101,9 +101,9 @@ group :development, :test do
   gem 'psych'
   gem 'puma'
   gem 'rspec-rails', '~> 4.0'
-  gem 'rubocop', '~> 1.23.0', require: false
-  gem 'rubocop-performance', '~> 1.12.0', require: false
-  gem 'rubocop-rails', '>= 2.5.2', require: false
+  gem 'rubocop', '~> 1.66.0', require: false
+  gem 'rubocop-performance', '~> 1.13.0', require: false
+  gem 'rubocop-rails', '>= 2.13.0', require: false
 end
 
 group :test do
