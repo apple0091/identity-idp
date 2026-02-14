@@ -19,7 +19,7 @@ gem 'connection_pool'
 gem 'cssbundling-rails'
 gem 'devise', '~> 4.8'
 gem 'dotiw', '>= 4.0.1'
-gem 'faraday'
+gem 'faraday', '>= 2.14.1'
 gem 'foundation_emails'
 gem 'good_job', '~> 2.7.0'
 gem 'hashie', '~> 4.1'
@@ -78,7 +78,7 @@ group :development do
   gem 'derailed_benchmarks', '~> 1.8'
   gem 'guard-rspec', require: false
   gem 'irb'
-  gem 'octokit'
+  gem 'octokit', '>= 4.23.0'
   gem 'rack-mini-profiler', '>= 1.1.3', require: false
   gem 'rails-erd', '>= 1.6.0'
 end
